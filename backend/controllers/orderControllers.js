@@ -52,7 +52,7 @@ export const placeOrder = async (req, res) => {
     }
 }
 
-export const veryfiOrder = async (req, res) => {
+export const verifyOrder = async (req, res) => {
     const {orderId, success} = req.body;
 
     try {
