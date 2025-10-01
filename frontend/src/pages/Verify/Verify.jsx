@@ -19,7 +19,7 @@ const Verify = () => {
         if(response.data.success)
         {
             toast.success("Order Placed Successful")
-            navigate(`${import.meta.env.FRONTEND_URL}/myorders`)
+            navigate(`/myorders`)
         }
         else
         {
