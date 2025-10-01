@@ -3,6 +3,8 @@ import { foodModel } from "../models/foodModel.js";
 
 export const addFood = async (req, res) => {
     let image = `${req.files.filename}`
+    console.log(req.files.filename);
+    console.log(req.file.filename);
 
     const {name, description, price, category} = req.body;
 
