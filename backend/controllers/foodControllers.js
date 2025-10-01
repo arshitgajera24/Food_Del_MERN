@@ -2,7 +2,7 @@ import fs from "fs";
 import { foodModel } from "../models/foodModel.js";
 
 export const addFood = async (req, res) => {
-    let image = `${req.files.filename}`
+    let image = `${req.file.filename}`
     console.log(req.files.filename);
     console.log(req.file.filename);
 
