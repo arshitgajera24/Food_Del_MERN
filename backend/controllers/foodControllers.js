@@ -2,9 +2,13 @@ import fs from "fs";
 import { foodModel } from "../models/foodModel.js";
 
 export const addFood = async (req, res) => {
-    let image = `${req.file.filename}`
-    console.log(req.files.filename);
-    console.log(req.file.filename);
+     if (!req.file) {
+            return res.status(400).json({ success: false, message: "Image is required" });
+        }
+
+        const image = req.file.filename;
+        console.log("Uploaded file:", req.file);
+        console.log("Request body:", req.body);
 
     const {name, description, price, category} = req.body;
 
